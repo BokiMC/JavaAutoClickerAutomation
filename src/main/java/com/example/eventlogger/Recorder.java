@@ -74,6 +74,7 @@ public class Recorder implements NativeMouseListener, NativeKeyListener {
             try {
                 playback();
                 System.out.println("Slušanje klikova završeno.");
+                return;
             } catch (NativeHookException ex) {
                 ex.printStackTrace();
             } catch (AWTException ex) {
@@ -117,6 +118,7 @@ public class Recorder implements NativeMouseListener, NativeKeyListener {
 
         // Oslobađanje resursa
         GlobalScreen.unregisterNativeHook();
+        
     }
 
 
